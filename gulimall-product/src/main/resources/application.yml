@@ -4,10 +4,21 @@ spring:
     password: lvjl
     url: jdbc:mysql://127.0.0.1:3306/gulimall_pms?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=CST
     driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:
     db-config:
       id-type: auto
+#      logic-delete-field: show_status
+      logic-delete-value: 0
+      logic-not-delete-value: 1
 server:
   port: 10000
+# 设置日志级别
+logging:
+  level:
+    com.shop.gulimall: debug

@@ -1,5 +1,6 @@
 package com.shop.gulimall.product.service.impl;
 
+import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import com.shop.common.utils.Query;
 import com.shop.gulimall.product.dao.CategoryDao;
 import com.shop.gulimall.product.entity.CategoryEntity;
 import com.shop.gulimall.product.service.CategoryService;
+import org.springframework.util.CollectionUtils;
 
 
 @Service("categoryService")
@@ -50,6 +52,18 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         }).collect(Collectors.toList());
 
         return level1Menus;
+    }
+
+    /**
+     * 删除多个商品分类
+     *
+     * @param asList
+     * @return
+     */
+    @Override
+    public Boolean removeMenusByIds(List<Long> asList) {
+        // TODO 检差当前删除的菜单，是否被其他地方引用
+        return CollectionUtils.isEmpty(asList) ? false : SqlHelper.retBool(baseMapper.deleteBatchIds(asList));
     }
 
     // 递归查找所有菜单的子菜单
