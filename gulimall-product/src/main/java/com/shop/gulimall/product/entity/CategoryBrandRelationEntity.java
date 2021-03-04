@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author lvjl
  * @email lvjl@gmail.com
- * @date 2020-08-31 16:53:06
+ * @date 2021-03-04 15:54:47
  */
 @Data
 @TableName("pms_category_brand_relation")
@@ -20,24 +20,24 @@ public class CategoryBrandRelationEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * 
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 品牌id
 	 */
 	private Long brandId;
 	/**
-	 * $column.comments
+	 * 分类id
 	 */
 	private Long catelogId;
 	/**
-	 * $column.comments
+	 * 
 	 */
 	private String brandName;
 	/**
-	 * $column.comments
+	 * 
 	 */
 	private String catelogName;
 

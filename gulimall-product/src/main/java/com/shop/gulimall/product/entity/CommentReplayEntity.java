@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author lvjl
  * @email lvjl@gmail.com
- * @date 2020-08-31 16:53:05
+ * @date 2021-03-04 15:54:47
  */
 @Data
 @TableName("pms_comment_replay")
@@ -20,16 +20,16 @@ public class CommentReplayEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 评论id
 	 */
 	private Long commentId;
 	/**
-	 * $column.comments
+	 * 回复id
 	 */
 	private Long replyId;
 

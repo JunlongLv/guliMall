@@ -16,7 +16,7 @@ import lombok.Data;
  * 
  * @author lvjl
  * @email lvjl@gmail.com
- * @date 2020-08-31 16:53:06
+ * @date 2021-03-04 15:54:47
  */
 @Data
 @TableName("pms_category")
@@ -24,41 +24,41 @@ public class CategoryEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * 分类id
 	 */
 	@TableId
 	private Long catId;
 	/**
-	 * $column.comments
+	 * 分类名称
 	 */
 	private String name;
 	/**
-	 * $column.comments
+	 * 父分类id
 	 */
 	private Long parentCid;
 	/**
-	 * $column.comments
+	 * 层级
 	 */
 	private Integer catLevel;
 	/**
-	 * $column.comments
+	 * 是否显示[0-不显示，1显示]
 	 */
 	@TableLogic(value = "1",delval = "0")
 	private Integer showStatus;
 	/**
-	 * $column.comments
+	 * 排序
 	 */
 	private Integer sort;
 	/**
-	 * $column.comments
+	 * 图标地址
 	 */
 	private String icon;
 	/**
-	 * $column.comments
+	 * 计量单位
 	 */
 	private String productUnit;
 	/**
-	 * $column.comments
+	 * 商品数量
 	 */
 	private Integer productCount;
 

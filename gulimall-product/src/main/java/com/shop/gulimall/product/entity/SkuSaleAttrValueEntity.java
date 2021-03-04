@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author lvjl
  * @email lvjl@gmail.com
- * @date 2020-08-31 16:53:06
+ * @date 2021-03-04 15:54:47
  */
 @Data
 @TableName("pms_sku_sale_attr_value")
@@ -20,28 +20,28 @@ public class SkuSaleAttrValueEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * sku_id
 	 */
 	private Long skuId;
 	/**
-	 * $column.comments
+	 * attr_id
 	 */
 	private Long attrId;
 	/**
-	 * $column.comments
+	 * 销售属性名
 	 */
 	private String attrName;
 	/**
-	 * $column.comments
+	 * 销售属性值
 	 */
 	private String attrValue;
 	/**
-	 * $column.comments
+	 * 顺序
 	 */
 	private Integer attrSort;
 

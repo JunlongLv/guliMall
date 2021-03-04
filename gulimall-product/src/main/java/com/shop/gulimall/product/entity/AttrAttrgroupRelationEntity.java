@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author lvjl
  * @email lvjl@gmail.com
- * @date 2020-08-31 16:53:05
+ * @date 2021-03-04 15:54:47
  */
 @Data
 @TableName("pms_attr_attrgroup_relation")
@@ -20,20 +20,20 @@ public class AttrAttrgroupRelationEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * 属性id
 	 */
 	private Long attrId;
 	/**
-	 * $column.comments
+	 * 属性分组id
 	 */
 	private Long attrGroupId;
 	/**
-	 * $column.comments
+	 * 属性组内排序
 	 */
 	private Integer attrSort;
 

@@ -12,7 +12,7 @@ import lombok.Data;
  * 
  * @author lvjl
  * @email lvjl@gmail.com
- * @date 2020-08-31 16:53:05
+ * @date 2021-03-04 15:54:47
  */
 @Data
 @TableName("pms_spu_images")
@@ -20,28 +20,28 @@ public class SpuImagesEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * $column.comments
+	 * spu_id
 	 */
 	private Long spuId;
 	/**
-	 * $column.comments
+	 * 图片名
 	 */
 	private String imgName;
 	/**
-	 * $column.comments
+	 * 图片地址
 	 */
 	private String imgUrl;
 	/**
-	 * $column.comments
+	 * 顺序
 	 */
 	private Integer imgSort;
 	/**
-	 * $column.comments
+	 * 是否默认图
 	 */
 	private Integer defaultImg;
 
